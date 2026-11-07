@@ -10,10 +10,10 @@ var require$$1$3 = require('path');
 var require$$7$1 = require('http');
 var require$$8 = require('url');
 var require$$1$4 = require('string_decoder');
-var require$$4$2 = require('timers');
+var require$$4$1 = require('timers');
 var require$$1$5 = require('assert');
 var require$$0$6 = require('tty');
-var require$$4$3 = require('net');
+var require$$4$2 = require('net');
 var require$$1$6 = require('stream');
 var require$$3$3 = require('zlib');
 var require$$0$7 = require('buffer');
@@ -890,23 +890,23 @@ var utils$2 = {};
   };
 })(utils$2);
 
-var name$1 = "ejs";
-var description$1 = "Embedded JavaScript templates";
+var name = "ejs";
+var description = "Embedded JavaScript templates";
 var keywords = [
 	"template",
 	"engine",
 	"ejs"
 ];
-var version$2 = "3.1.10";
-var author$1 = "Matthew Eernisse <mde@fleegix.org> (http://fleegix.org)";
-var license$1 = "Apache-2.0";
+var version$1 = "3.1.10";
+var author = "Matthew Eernisse <mde@fleegix.org> (http://fleegix.org)";
+var license = "Apache-2.0";
 var bin = {
 	ejs: "./bin/cli.js"
 };
-var main$1 = "./lib/ejs.js";
+var main = "./lib/ejs.js";
 var jsdelivr = "ejs.min.js";
 var unpkg = "ejs.min.js";
-var repository$1 = {
+var repository = {
 	type: "git",
 	url: "git://github.com/mde/ejs.git"
 };
@@ -931,17 +931,17 @@ var scripts = {
 	test: "npx jake test"
 };
 var require$$3$2 = {
-	name: name$1,
-	description: description$1,
+	name: name,
+	description: description,
 	keywords: keywords,
-	version: version$2,
-	author: author$1,
-	license: license$1,
+	version: version$1,
+	author: author,
+	license: license,
 	bin: bin,
-	main: main$1,
+	main: main,
 	jsdelivr: jsdelivr,
 	unpkg: unpkg,
-	repository: repository$1,
+	repository: repository,
 	bugs: bugs,
 	homepage: homepage,
 	dependencies: dependencies,
@@ -7664,7 +7664,7 @@ function requireParser() {
       events = require$$1$1;
       bom = requireBom();
       processors = requireProcessors();
-      setImmediate = require$$4$2.setImmediate;
+      setImmediate = require$$4$1.setImmediate;
       defaults = requireDefaults().defaults;
       isEmpty = function isEmpty(thing) {
         return _typeof(thing) === "object" && thing != null && Object.keys(thing).length === 0;
@@ -11246,7 +11246,7 @@ function requireNode() {
           break;
         case 'PIPE':
         case 'TCP':
-          var net = require$$4$3;
+          var net = require$$4$2;
           stream = new net.Socket({
             fd: fd,
             readable: false,
@@ -18052,7 +18052,7 @@ var gbChars = [
 	39394,
 	189000
 ];
-var require$$4$1 = {
+var require$$4 = {
 	uChars: uChars,
 	gbChars: gbChars
 };
@@ -21791,7 +21791,7 @@ function requireDbcsData() {
         return require$$2$1.concat(require$$3$1);
       },
       gb18030: function gb18030() {
-        return require$$4$1;
+        return require$$4;
       },
       encodeSkipVals: [0x80],
       encodeAdd: {
@@ -47658,7 +47658,7 @@ function validMime(type) {
 
 var accepts = accepts$1;
 var deprecate$1 = depd_1('express');
-var isIP = require$$4$3.isIP;
+var isIP = require$$4$2.isIP;
 var typeis = typeIsExports;
 var http$1 = require$$7$1;
 var fresh = fresh_1;
@@ -50349,7 +50349,7 @@ function v7Bytes(rnds, msecs, seq, buf) {
   return buf;
 }
 
-function version$1(uuid) {
+function version(uuid) {
   if (!validate(uuid)) {
     throw TypeError('Invalid UUID');
   }
@@ -50371,59 +50371,15 @@ var esmBrowser = /*#__PURE__*/Object.freeze({
 	v6ToV1: v6ToV1,
 	v7: v7,
 	validate: validate,
-	version: version$1
+	version: version
 });
 
 var require$$3 = /*@__PURE__*/getAugmentedNamespace(esmBrowser);
-
-var name = "@foxreis/tizentube";
-var appName = "TizenTube (startup fix)";
-var version = "1.15.2-startup.1";
-var description = "TizenTube is an ad-free and sponsor-free solution for your favourite streaming website on your Tizen (Samsung) TVs.";
-var packageType = "mods";
-var websiteURL = "https://youtube.com/tv?additionalDataUrl=http%3A%2F%2Flocalhost%3A8085%2Fdial%2Fapps%2FYouTube";
-var main = "dist/userScript.js";
-var author = "Reis Can";
-var serviceFile = "dist/service.js";
-var tizenBrewModule$1 = {
-	name: "BSchneppe/TizenTube@tizenbrew-startup-fix",
-	type: "gh"
-};
-var keys = [
-	"MediaPlayPause",
-	"MediaPlay",
-	"MediaPause",
-	"MediaStop",
-	"MediaFastForward",
-	"MediaRewind",
-	"MediaTrackNext",
-	"MediaTrackPrevious"
-];
-var repository = {
-	url: "https://github.com/BSchneppe/TizenTube"
-};
-var license = "GPL-3.0-only";
-var require$$4 = {
-	name: name,
-	appName: appName,
-	version: version,
-	description: description,
-	packageType: packageType,
-	websiteURL: websiteURL,
-	main: main,
-	author: author,
-	serviceFile: serviceFile,
-	tizenBrewModule: tizenBrewModule$1,
-	keys: keys,
-	repository: repository,
-	license: license
-};
 
 var dial = peerDial;
 var express = express$1;
 var cors = libExports;
 var uuid = require$$3;
-var tizenBrewModule = require$$4.tizenBrewModule;
 var app = express();
 var corsOptions = {
   origin: '*',
@@ -50443,8 +50399,8 @@ var apps = {
     launch: function launch(launchData) {
       var tbPackageId = tizen.application.getAppInfo().packageId;
       tizen.application.launchAppControl(new tizen.ApplicationControl("http://tizen.org/appcontrol/operation/view", null, null, null, [new tizen.ApplicationControlData("module", [JSON.stringify({
-        moduleName: tizenBrewModule ? tizenBrewModule.name : '@foxreis/tizentube',
-        moduleType: tizenBrewModule ? tizenBrewModule.type : 'npm',
+        moduleName: '@foxreis/tizentube',
+        moduleType: 'npm',
         args: launchData
       })])]), "".concat(tbPackageId, ".").concat(commonjsGlobal.isTizenTube ? 'TizenTubeStandalone' : 'TizenBrewStandalone'));
     }
