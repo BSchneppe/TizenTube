@@ -2,6 +2,7 @@ const dial = require("@patrickkfkan/peer-dial");
 const express = require('express');
 const cors = require('cors');
 const uuid = require('uuid');
+const { tizenBrewModule } = require('../package.json');
 const app = express();
 
 const corsOptions = {
@@ -32,8 +33,8 @@ const apps = {
                     [
                         new tizen.ApplicationControlData("module", [JSON.stringify(
                             {
-                                moduleName: '@foxreis/tizentube',
-                                moduleType: 'npm',
+                                moduleName: tizenBrewModule ? tizenBrewModule.name : '@foxreis/tizentube',
+                                moduleType: tizenBrewModule ? tizenBrewModule.type : 'npm',
                                 args: launchData
                             }
                         )])

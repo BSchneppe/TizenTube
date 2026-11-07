@@ -24,6 +24,20 @@
 
 Follow the guide in the [Installation Guide](./docs/README.md).
 
+### Testing this fork in TizenBrew
+
+In TizenBrew, add a **GitHub** module with the repository
+`BSchneppe/TizenTube@tizenbrew-startup-fix`. Its full module identifier is
+`gh/BSchneppe/TizenTube@tizenbrew-startup-fix`.
+
+Fully close and reopen TizenBrew, then launch **TizenTube (startup fix)**.
+This branch includes the compiled userscript and casting service required by
+TizenBrew. Casting back to the TV also launches this fork.
+
+The startup fix lets the mod initialize before YouTube's page and services are
+ready, and tolerates missing or changed account-picker data. It does not require
+changing Developer Mode's Host PC IP from `127.0.0.1`.
+
 ## ✨ Features
 - 📺 **Picture-in-Picture Mode**
 - 🛑 **Ad Blocker**: Enjoy your favourite streaming website without interruptions from ads.
